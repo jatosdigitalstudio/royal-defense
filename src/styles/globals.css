@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth !important;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #08001A;
+  /* cursor: none; */
+  scroll-behavior: smooth !important;
+  /* overscroll-behavior: none;
+  -ms-overflow-style: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+    
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  --_g: no-repeat radial-gradient(farthest-side,#fff 94%,#ffffff);
+  background:
+    var(--_g) 0    0,
+    var(--_g) 100% 0,
+    var(--_g) 100% 100%,
+    var(--_g) 0    100%;
+  background-size: 40% 40%;
+  animation: l38 .5s infinite; 
+}
+@keyframes l38 {
+  100% {background-position: 100% 0,100% 100%,0 100%,0 0}
+}
+
+/* 
+.scroll-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  will-change: transform;
+
+  .ghost {
+    width: 100vw;
+  }
+}
+
+.scroll-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+.scroll-container .ghost {
+  width: 100vw;
+}
+.thumbnails-container {
+  position: relative;
+  height: 100vh;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 0px 160px;
+  background-color: #141414;
+  border: 40px solid yellowgreen;
+}
+.thumbnails-container .thumbnails {
+  position: relative;
+  display: flex;
+  border: 20px solid yellow;
+}
+.thumbnails-container .thumbnails > *:not(:last-child) {
+  margin-right: 45px;
+}
+.thumbnails-container .thumbnails .thumbnail {
+  height: 40vh;
+  width: 700px;
+  background-color: royalblue;
+  border: 15px solid magenta;
+} */
+
+/* 
+.flare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid #ffffff2b;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999999 !important;
+  backdrop-filter: blur(2px);
+  background-color: white;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .flare {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+}
+
+.flare.pointer {
+  display: none;
+  opacity: 0 !important;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+} */
+
+.slick-dots li button:before {
+  color:  #fff !important;
+}
+.slick-dots li.slick-active button:before {
+  color:  #fff !important;
+}
