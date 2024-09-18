@@ -10,7 +10,7 @@ import Image from "next/image";
 import { montserrat } from "@/app/layout";
 
 const variants1 = {
-    hidden: { opacity: 0, y:10 },
+    hidden: { opacity: 0, y:0 },
     visible: {
       opacity: 1,
       y:30,
@@ -21,7 +21,7 @@ const variants1 = {
   };
 
   const variants2 = {
-    hidden: { opacity: 0, y:10 },
+    hidden: { opacity: 0, y:0 },
     visible: {
       opacity: 1,
       y:0,
@@ -51,7 +51,7 @@ export default function About() {
                 ref={ref}
                 initial="hidden"
                 animate={control}
-                className="mx-auto text-center pt-6 mb-6 md:mt-0 rounded-lg shadow-xl p-6"
+                className="mx-auto text-center pt-6 mt-12 mb-6 md:mt-0 rounded-lg shadow-xl p-6"
               >
                 <Typography 
                   variant="h2"

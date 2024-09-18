@@ -21,50 +21,6 @@ import { ABOUT_BANNER } from "@/lib/data"
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
-const variants1 = {
-    hidden: { opacity: 0, y:30 },
-    visible: {
-      opacity: 1,
-      y:0,
-      transition: {
-        duration: 0.5
-      },
-    },
-  };
-
-  const variants2 = {
-    hidden: { opacity: 0, y:30 },
-    visible: {
-      opacity: 1,
-      y:0,
-      transition: {
-        duration: 1
-      },
-    },
-  };
-
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
   
 export default function Solution() {
     const control = useAnimation();
@@ -86,8 +42,6 @@ export default function Solution() {
         swipe: true,
         draggable: true,
         pauseOnHover : true,
-        // fade: true,
-        // waitForAnimate: false,
         speed: 500,
         autoplay: true,
         autoplaySpeed: 8000,
@@ -98,16 +52,10 @@ export default function Solution() {
               <ul className="mt-[-5rem] text-center !text-white !z-40"> {dots} </ul>
             </div>
           ),
-        // customPaging: i => (
-        // <div className="text-primary text-center bg-white rounded-3xl my-2 ">
-        //     {/* {i + 1} */}
-        //     {i+1}
-        // </div>
-        // )
     };
     
     return (
-        <section className="w-full h-[110vh]" id="solution" >
+        <section className="w-full h-[62rem] lg:h-[100vh]" id="solution" >
             <div className="mb-8 absolute !z-30 pt-[6rem] px-8 lg:px-[6rem]">
                 <Typography
                     variant="h1"
@@ -129,7 +77,7 @@ export default function Solution() {
             <Slider {...settings}>
                 {ABOUT_BANNER.map((banner,idx)=>(
                     <>
-                    <div key={idx} className="absolute !z-30 h-[110vh] w-full pt-[20rem] lg:pt-[18rem] lg:px-[6rem]">
+                    <div key={idx} className="absolute !z-30 h-[62rem] lg:h-[100vh] w-full pt-[22rem] lg:pt-[18rem] lg:px-[6rem]">
                         {/* <h1 className="w-[35%] lg:w-[60%] text-white font-bold text-2xl mb-4">{idx+1 +". "+ banner.label}</h1> */}
                         <div className="flex flex-wrap px-8 lg:px-0 w-[25rem] lg:w-[50rem]">
                             <h1 className="text-white font-bold text-2xl mb-4">{banner.label}</h1>
@@ -149,7 +97,7 @@ export default function Solution() {
                             </div>
                         </div>
                     </div>
-                    <div key={idx} className="relative !z-0 h-[110vh]">
+                    <div key={idx} className="relative !z-0 h-[62rem] lg:h-[100vh]">
                         <img src={banner.image} alt={banner.label} className="w-[100%] h-[100%] object-cover"/>
                     </div>
                     </>
