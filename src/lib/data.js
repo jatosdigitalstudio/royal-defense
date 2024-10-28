@@ -29,7 +29,7 @@ export const ABOUT_BANNER = [
     label: 'Tactical Equipment',
     value: 'Enhance your operational capabilities with our advanced range of tactical equipment. Designed for reliability and performance in diverse environments, our solutions offer superior functionality, ensuring improved situational awareness, enhanced communication, and optimized operational efficiency. Our technologies provide the essential tools required for mission success and personnel safety. ',
     list: ['Thermal Weapon Scope',"Multifunction Binocular", "Night-Vision Device", "Portable Signaling Surveillance", "Tactical Network Relay System", "Interoperability Extended Communication Relay System", "Power Management System"], 
-    image: '/images/img_08.jpg',
+    image: '/images/img_02.jpg',
   },
 ];
 
